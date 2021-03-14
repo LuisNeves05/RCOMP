@@ -4,6 +4,7 @@ RCOMP 2020-2021 Project repository template
   * 1121224 - {João Soares} 
   * 1181597 - {Fausto Alves} 
   * 1191421 - {Luís Neves} 
+  * 1200625 - {Sérgio Lopes}
 
 # 2. Sprints #
   * [Sprint 1](doc/sprint1/)
