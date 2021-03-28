@@ -162,9 +162,9 @@ The second CP is in room 31.2 and it feeds the remaining 3 rooms.
 
 
 
-####Demonstration of calculations regarding the number of network outlets for each room
+###Demonstration of calculations regarding the number of network outlets for each room
 
-#####Ground Floor
+####Ground Floor
 >**Room 30.1**
 >   >1.3cm x 1.5cm
 >   ><=>6.5 x 7.5 <=> 48,75 m2
@@ -207,7 +207,7 @@ The second CP is in room 31.2 and it feeds the remaining 3 rooms.
  >
  >######310 Outlets
 
-#####First Floor
+####First Floor
 
 >**31.1**
  >   >1.2cm x 1.5cm
