@@ -39,3 +39,34 @@ The IPv4 network TTT has not been implemented.
 The routing table at router FF has the wrong mask for network YYY.
 Nodes on network CCC are not receiving the default-gateway by DHCP.
 
+#Full inventory
+
+####Copper Cable 
+14 545 meters of S/UTP protected cable
+>
+7,50 meters of S/STP protected cable 
+####Fiber Cable
+230 meters
+####Floor Trunking
+280 meters
+####Vertical Trunking
+22,50 meters
+####Dropped Ceiling Trunking
+90 meters
+####Access Points
+3 Access Points
+####Outlets
+415 outlets
+####Telecomunication Enclosures
+5 total telecomunication enclosures
+>
+>Floor 0 - room 30.5 - TE 1 - 24U
+>
+>Floor 0 - room 30.5 - TE 2 - 84U
+>
+>Floor 0 - room 30.2 - TE 3 - 12U
+>
+>Floor 1 - room 31.4 - TE 4 - 18U
+>
+>Floor 1 - room 31.2 - TE 5 - 12U
+
