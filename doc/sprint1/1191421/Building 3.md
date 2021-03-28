@@ -25,6 +25,8 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1191421 folder
 
 
 * ####Copper Cabble (T-568A)
+>13 300 for the big room on the right.
+>
 >650 meters for the rest of the rooms on the ground floor
 > #####13 950 meters total
 * ####Fibre Cable
