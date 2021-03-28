@@ -33,26 +33,24 @@ A better spot for the Access Point in the big room on floor 0 should be found.
 ### Partially implemented with no issues. ###
 The VLAN CCCC with VLANID 400 has not been implemented.
 The VTP configuration is not present in switch DD.
-## 2.4. 4444444 - IPv4 addressing and routing configurations for building D #
+## 2.4. 1200625 - Structured cable design for building 4, floors 0 and 1 #
 ### Partially implemented with issues. ###
-The IPv4 network TTT has not been implemented.
-The routing table at router FF has the wrong mask for network YYY.
-Nodes on network CCC are not receiving the default-gateway by DHCP.
+A better spot for APs and counting trunkings.
 
 #Full inventory
 
 ####Copper Cable 
-30770 +  meters of S/UTP protected cable
+46657.5 +  meters of S/UTP protected cable
 >
-7,50 meters of S/STP protected cable 
+91.5 meters of S/STP protected cable 
 ####Fiber Cable
-230 meters
+16321 meters
 ####Trunking
-392.5 +  meters
+1144 +  meters
 ####Access Points
 12 Access Points
 ####Outlets
-459 +  outlets
+1038 +  outlets
 ####Telecomunication Enclosures
-5 +  total telecomunication enclosures
+15 +  total telecomunication enclosures
 
