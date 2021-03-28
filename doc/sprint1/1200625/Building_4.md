@@ -75,7 +75,7 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1200625 folder
 * ####Fibre Cable
 >Taking into consideration the redundacy needed to ensure safety and continuous signal to the building itself, twice the amount of fibre cable will be requested.
 >
->As so, to make every connection and keep them redundant, **30 meters** of fibre cable will be necessary.
+>As so, to make every connection and keep them redundant, **152 meters** of fibre cable will be necessary.
 * ####Floor Trunking
 >This type of trunking should be rounded, to prevent accidents in the various rooms it is placed in.
 >
