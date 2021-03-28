@@ -1,25 +1,41 @@
-RCOMP 2019-2020 Project - Sprint 1 planning
+RCOMP 2020-2021 Project - Sprint 1 planning
 ===========================================
-### Sprint master: 1111111 ###
-(This file is to be created/edited by the sprint master only)
-# 1. Sprint's backlog #
-(Copy here a summary of the provided sprint's backlog)
-# 2. Technical decisions and coordination #
-In this section, all technical decisions taken in the planning meeting should be mentioned. 		Most importantly, all technical decisions impacting on the subtasks implementation must be settled on this 		meeting and specified here.
+### Sprint master: 181597 ###
 
-#### Examples: ####
-  * Backbone cable types to be used
-  * VLAN IDs to be used
-  * VTP domains
-  * WiFi channels
-  * IPv4 networks' addresses and routers' addresses
-  * Routing protocols
-  * Application protocols outlining (further coordination may be required between members)
+# 1. Sprint's backlog #
+| Task | Task Description
+|:-----  |:---------------------------  |
+|T.1.1 | Development of a structured cabling project for building 1, and also encompassing the campus backbone. |
+|T.1.2 | Development of a structured cabling project for building 2. |
+|T.1.3 | Development of a structured cabling project for building 3. |
+|T.1.4 | Development of a structured cabling project for building 4. |
+
+For each task on this sprint, the output is a structured cabling project.
+
+# 2. Technical decisions and coordination #
+    
+    The main objective is to spread network cable connections to every place where they are required. For this purpose three successive levels of cable distribution points are defined, they are known as cross connects or distributors:
+    - Main cross-connect (MC) -> Highest level cable distribution point.
+    - Intermediate cross-connect (IC) -> this is the second cable distribution level, often there is one IC per building.
+    - Horizontal cross-connect (HC) -> lowest level cable distribution point, usually provide cable connections to end user outlets at the work area on the floor. Consolidation Points (CP) are appropriate for high outlets density areas of a floor
+
+   Structured cabling – cable types:
+    Copper cables (T-568A standard):
+    - Inside TE (Telecommunications Enclousers) -> CAT7 (S/STP), elsewhere -> CAT7 (S/UTP)
+    Copper connectors:
+    -RJ45 (Registered Jack 45)
+    Copper patch cords with a male ISO 8877 connector on each end.
+    Copper patch panels with a high density mounted sets of ISO 8877 female connectors, and can have 24 or 48 ISO 8877 female connectors.
+    Optical fibre cables:
+    Monomode optical fibre.
+    Standard Connector (SC)
+    Fibre patch panels:
+    -Fibre patch panels are high density sets of female adapters providing the mechanical attachment between fibre cable connectors.
+    
 # 3. Subtasks assignment #
-(For each team member (sprint master included), the description of the assigned subtask in sprint 1)
 
 #### Example: ####
-  * 1111111 - Structured cable design for building A, floors 2 and 3
-  * 2222222 - IPv4 addressing and routing configurations for building D
-  * 3333333 - Network access policies enforcement for building X
-  * 4444444 - Network application Z development
+  * 1181597 - Structured cable design for building 1 ground floor, building 2 floor one and the campus backbone.
+  * 1191421 - Structured cable design for building 3.
+  * 1121224 - Structured cable design for building 1 floor one, building 2 ground floor.
+  * 1200625 - Structured cable design for building 4.
