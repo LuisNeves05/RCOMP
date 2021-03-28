@@ -5,7 +5,7 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1181597 folder
 ##### Rui Alves - 1181597 ###
 
 ###Building 1 - Ground Floor
-![B1GroundFloor.png](B1GroundFloor.png)
+![B1floor0.png](B1floor0.png)
 
 
 ####Scale
@@ -67,7 +67,7 @@ r = 1.3(3)
 > For 10.1, with 7 meters from with and 11.25 meters length, that gives an area of about 78.75m2, the number of outlets should be area/10*2, that gives us 15 outlets, by excess.
 > For 10.2, with 10.15 meters from with and 11.25 meters length, that gives an area of about 120m2, the number of outlets should be area/10*2, that gives us 24 outlets.
 > For 10.3, the number of outlets is 5, specified by the product owner, plus one outlet to the wireless access point.
->#####45 Outlets in total
+>#####55 Outlets in total
 * ####Telecomunication Enclosures
 >For this floor, there will be 3 telecomunication enclosures (Not represented by scale).
 >
@@ -84,7 +84,7 @@ r = 1.3(3)
 
 
 ###Building 2 - Floor One
- ![B2Floor1.png](B2Floor1.png)
+ ![B2floor1.png](B2floor1.png)
  
 ####Scale
 ```
@@ -194,7 +194,7 @@ r = 1.43
 > For 21.10, with 5 meters from with and 11.07 meters length, that gives an area of about 55.35m2, the number of outlets should be area/10*2, that gives us 11 outlets.
 > For 21.11, with 5 meters from with and 11.07 meters length, that gives an area of about 55.35m2, the number of outlets should be area/10*2, that gives us 11 outlets.
 > We also have 2 more outlets to provide 2 access points.
->#####45 Outlets in total
+>#####109 Outlets in total
 * ####Telecomunication Enclosures
 >For this floor, there will be 10 telecomunication enclosures (Not represented by scale).
 >
@@ -229,3 +229,24 @@ r = 1.43
 >#####TE #21.9 -> 6U
 >#####TE #21.10 -> 6U
 >#####TE #21.11 -> 6U
+
+#Full inventory
+
+####Copper Cable 
+1342.5 meters of S/UTP protected cable
+>
+76.5 meters of S/STP protected cable 
+####Fiber Cable
+961 meters
+####Trunking
+359 meters
+####Access Points
+3 Access Points
+####Outlets
+164 outlets
+####Telecomunication Enclosures
+5 total telecomunication enclosures
+>
+>Ground Floor B1 - 30U
+>
+>Floor One B2 - 70U
