@@ -23,7 +23,7 @@ For the last three cases, a text description of what has not been implemented an
 Unimplemented features and issues solving is assigned to the same member on the next sprint.
 
 
-## 2.1. 11891597 - Structured cable design for building 1 Ground Floor and building 2 Floor 1 #
+## 2.1. 1189597 - Structured cable design for building 1 Ground Floor and building 2 Floor 1 #
 ### Totally implemented with issues. ###
 More redundance could be achieved and issues around the unfamiliarity pricing of the material to be used.
 ## 2.2. 1191421 - Structured cable design for building 3, floors 0 and 1 #
