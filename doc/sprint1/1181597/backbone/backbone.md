@@ -20,4 +20,4 @@
 
 - We use monomode optical fiber in the cabling backbone.
 
-- We use a total of meters of optical fiber in the backbone.
+- We use a 447 meters total of meters of optical fiber in the backbone.
