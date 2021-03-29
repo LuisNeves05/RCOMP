@@ -34,12 +34,12 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1121224 folder
 * ####Floor Trunking
 >This type of trunking should be rounded, to prevent accidents in the various rooms it is placed in.
 >
->#####301 meters
+>#####120 meters
 
 * ####Vertical Trunking
 >Again, this type of trunking is to the client's taste, as it is meant to stay on the wall and should not cause much trouble.
 >
->#####7 meters
+>#####3 meters
 * ####Access points
 >The access points will be responsible for providing wireless internet coverage of the entire floor.
 >
@@ -73,6 +73,31 @@ This floor is made up of 1Mc,1 IC, 1 HC and 3 CP's.
 The CP on the room 11.4 had to support more than 24 cables, so it was decided a 48 patch panel was better to accomodate the needs of the room.
 The acess point was placed in a spot where the whole floor will have a good coverage via Wi-Fi connection. 
 Every fiber connection was made using redundancy to ensure good connection.
+
+#Full inventory Building 1 Floor 1
+
+####Copper Cable 
+> ** 640  meters of S/UTP protected cable**
+> **25 meters of S/STP protected cable** 
+####Fiber Cable
+> **358 meters**
+####Floor Trunking
+> **120 meters**
+####Vertical Trunking
+> **3 meters**
+####Access Points
+> **1 Access Point**
+####Outlets
+> **51 outlets**
+####Telecomunication Enclosures
+> **3 total telecomunication enclosures**
+>
+>**Room 11.2 - TE 1 - 6U**  
+>
+>**Room 11.3 - TE 2 - 6U**  
+>
+>**Room 11.4 - TE 2 - 12U**
+>
 
 ## Building 2 - Ground Floor ####
  ![Building_2_groundfloor.jpg](Building_2_groundfloor.jpg)
@@ -122,6 +147,7 @@ Every fiber connection was made using redundancy to ensure good connection.
 ###To sum up and explain every connection and decision made,
 This floor is only requires outlets in some of the rooms, so its easy to route. smaller.Room 20.2 contains the IC, HC and a CP, which means it powers the entire floor. There are 2 Access Points, to provide full Wi-Fi support throughout all the floor's area.
 Rooms 20.3 and 20.4 are quite outlet heavy, thus a 48 cp will be provided to each room to accomodate those necessities.
+For even better redundance , the HC from Room 20.2 is connected to the HC directly above.
 
 #Full inventory Building 2
 

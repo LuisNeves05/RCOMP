@@ -134,9 +134,9 @@ The second CP is in room 31.2 and it feeds the remaining 3 rooms.
 #Full inventory
 
 ####Copper Cable 
-> **14 545 meters of S/UTP protected cable**
+> **14 337 meters of S/UTP protected cable**
 >
-> **7,50 meters of S/STP protected cable** 
+> **208 meters of S/STP protected cable** 
 ####Fiber Cable
 > **230 meters**
 ####Floor Trunking

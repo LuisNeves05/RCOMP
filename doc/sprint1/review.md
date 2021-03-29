@@ -29,28 +29,29 @@ More redundance could be achieved and issues around the unfamiliarity pricing of
 ## 2.2. 1191421 - Structured cable design for building 3, floors 0 and 1 #
 ### Totally implemented with issues. ###
 A better spot for the Access Point in the big room on floor 0 should be found. 
-## 2.3. 3333333 - VLAN devices configuration for building C #
-### Partially implemented with no issues. ###
-The VLAN CCCC with VLANID 400 has not been implemented.
-The VTP configuration is not present in switch DD.
+## 2.3. 11221224 - Structured cable design for building 1 Floor One and building 2 Ground Floor ###
+### Totally implemented with issues. ###
+Overall height from TE´s and devices relative to the floor were not contemplated, except for AP´s.
+Issues with cable backbone redundancy regarding multiple connections between same levels (IC´s).
+
 ## 2.4. 1200625 - Structured cable design for building 4, floors 0 and 1 #
 ### Partially implemented with issues. ###
 A better spot for APs and counting trunkings.
 
 #Full inventory
-
-####Copper Cable 
-46657.5 +  meters of S/UTP protected cable
 >
-91.5 meters of S/STP protected cable 
+####Copper Cable 
+48115 meters of S/UTP protected cable
+>
+580 meters of S/STP protected cable 
 ####Fiber Cable
-16321 meters
+17119 meters
 ####Trunking
-1144 +  meters
+1300  meters
 ####Access Points
 12 Access Points
 ####Outlets
-1038 +  outlets
+1160 outlets
 ####Telecomunication Enclosures
-15 +  total telecomunication enclosures
+21 total telecomunication enclosures with 460U total size
 
