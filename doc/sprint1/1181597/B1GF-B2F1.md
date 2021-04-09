@@ -84,7 +84,7 @@ r = 1.3(3)
 
 
 ###Building 2 - Floor One
- ![B2Floor1.png](B2floor1.png)
+![B2Floor1.png](B2Floor1.png)
  
 ####Scale
 ```
