@@ -5,7 +5,7 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1181597 folder
 ##### Rui Alves - 1181597 ###
 
 ###Building 1 - Ground Floor
-![B1floor0.png](B1floor0.png)
+![B1GroundFloor.png](B1GroundFloor.png)
 
 
 ####Scale
@@ -84,7 +84,7 @@ r = 1.3(3)
 
 
 ###Building 2 - Floor One
- ![B2floor1.png](B2floor1.png)
+ ![B2Floor1.png](B2floor1.png)
  
 ####Scale
 ```
