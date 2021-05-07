@@ -1,0 +1,99 @@
+
+---------------Building 1-----------------
+------------------------------------------
+ip dhcp pool B1_DMZ_70N
+network 10.126.115.0 255.255.255.128
+default-router 10.126.115.10
+ip dhcp excluded-address 10.126.115.2
+ip dhcp excluded-address 10.126.115.3
+ip dhcp excluded-address 10.126.115.10
+
+ip dhcp pool B1_Backbone_120N
+network 10.126.114.0 255.255.255.128
+default-router 10.126.114.2
+ip dhcp excluded-address 10.126.114.2
+
+ip dhcp pool B1_END_USER_F0_40N
+network 10.126.117.64 255.255.255.192
+default-router 10.126.117.75
+ip dhcp excluded-address 10.126.117.75
+
+ip dhcp pool B1_END_USER_F1_40N
+network 10.126.117.128 255.255.255.192
+default-router 10.126.117.139
+ip dhcp excluded-address 10.126.117.139
+
+ip dhcp pool B1_WiFi_24N
+network 10.126.118.224 255.255.255.224
+default-router 10.126.118.235
+ip dhcp excluded-address 10.126.118.235
+
+ip dhcp pool B1_VoIP_20N
+network 10.126.119.0 255.255.255.224
+option 150 ip 10.126.119.10
+default-router 10.126.119.10
+ip dhcp excluded-address 10.126.119.10
+------------------------------------------
+
+
+---------------Building 2-----------------
+------------------------------------------
+ip dhcp pool B2_DMZ_12N
+network 10.126.119.32 255.255.255.240
+default-router 10.126.119.33
+ip dhcp excluded-address 10.126.119.33
+ip dhcp excluded-address 10.126.119.34
+ip dhcp excluded-address 10.126.119.35
+
+
+ip dhcp pool B2_END_USER_F0_60N
+network 10.126.116.0 255.255.255.192
+default-router 10.126.116.1
+ip dhcp excluded-address 10.126.116.1
+
+ip dhcp pool B2_END_USER_F1_70N
+ network 10.126.115.128 255.255.255.128
+ default-router 10.126.115.129
+ip dhcp excluded-address 10.126.115.129
+
+ip dhcp pool B2_WiFi_100N
+network 10.126.114.128  255.255.255.128
+default-router 10.126.114.129
+ip dhcp excluded-address 10.126.114.129
+
+ip dhcp pool B2_VoIP_35N
+ network 10.126.118.128 255.255.255.192
+ option 150 ip 10.126.118.129
+ default-router 10.126.118.129
+ip dhcp excluded-address 10.126.118.129
+
+---------------Building 3-----------------
+------------------------------------------
+ip dhcp pool B3_DMZ_250N
+network 10.126.112.0 255.255.255.0
+default-router 10.126.112.50
+ip dhcp excluded-address 10.126.112.50
+ip dhcp excluded-address 10.126.112.1
+ip dhcp excluded-address 10.126.112.2
+
+
+ip dhcp pool B3_END_USER_F0_40N
+network 10.126.117.192 255.255.255.192
+default-router 10.126.117.203
+ip dhcp excluded-address 10.126.117.203
+
+ip dhcp pool B3_END_USER_F1_44N
+network 10.126.117.0 255.255.255.192
+default-router 10.126.117.3
+ip dhcp excluded-address 10.126.117.3
+
+ip dhcp pool B3_WiFi_60N
+network 10.126.116.64 255.255.255.192
+default-router 10.126.116.68
+ip dhcp excluded-address 10.126.116.68
+
+ip dhcp pool B1_VoIP_40N
+network 10.126.118.0 255.255.255.192
+option 150 ip 10.126.118.1
+default-router 10.126.118.1
+ip dhcp excluded-address 10.126.118.1

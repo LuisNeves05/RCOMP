@@ -1,0 +1,10 @@
+---------------Building 2-----------------
+------------------------------------------
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport voice vlan 341
+Switch(config-if)#no switchport access vlan
+---------------Building 3-----------------
+------------------------------------------
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport voice vlan 339
+Switch(config-if)#no switchport access vlan
