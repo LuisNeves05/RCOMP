@@ -7,7 +7,7 @@ RCOMP 2019-2020 Project - Sprint 2 - Member 1121224 folder
 ## Technical decisions ##
 
 ### VLAN devices configuration ###
-**VLAN IDs to be used: 327, 329, 336,337, 343, 344 **
+**VLAN IDs to be used: 327, 329, 336,337, 343, 344**
 
 * VLAN for backbone: 327
 * VLAN for all end-user outlets on the ground floor: 336

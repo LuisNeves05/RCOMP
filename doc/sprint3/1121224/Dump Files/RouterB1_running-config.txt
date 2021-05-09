@@ -1,0 +1,187 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 10.126.117.75
+ip dhcp excluded-address 10.126.115.2
+ip dhcp excluded-address 10.126.115.3
+ip dhcp excluded-address 10.126.115.10
+ip dhcp excluded-address 10.126.114.2
+ip dhcp excluded-address 10.126.117.139
+ip dhcp excluded-address 10.126.118.235
+ip dhcp excluded-address 10.126.119.10
+!
+ip dhcp pool B1_Backbone_120N
+ network 10.126.114.0 255.255.255.128
+ default-router 10.126.114.2
+ dns-server 10.126.115.2
+ip dhcp pool B1_DMZ_70N
+ network 10.126.115.0 255.255.255.128
+ default-router 10.126.115.10
+ dns-server 10.126.115.2
+ip dhcp pool B1_END_USER_F0_40N
+ network 10.126.117.64 255.255.255.192
+ default-router 10.126.117.75
+ dns-server 10.126.115.2
+ip dhcp pool B1_END_USER_F1_40N
+ network 10.126.117.128 255.255.255.192
+ default-router 10.126.117.139
+ dns-server 10.126.115.2
+ip dhcp pool B1_WiFi_24N
+ network 10.126.118.224 255.255.255.224
+ default-router 10.126.118.235
+ dns-server 10.126.115.2
+ip dhcp pool B1_VoIP_20N
+ network 10.126.119.0 255.255.255.224
+ default-router 10.126.119.10
+ option 150 ip 10.126.119.10
+ dns-server 10.126.115.2
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017U2Z9-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.126.114.2 255.255.255.128
+ ip nat outside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 329
+ ip address 10.126.115.10 255.255.255.128
+ ip nat inside
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 336
+ ip address 10.126.117.75 255.255.255.192
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 337
+ ip address 10.126.117.139 255.255.255.192
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 343
+ ip address 10.126.118.235 255.255.255.224
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 344
+ ip address 10.126.119.10 255.255.255.224
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 10.126.114.0 0.0.0.127 area 0
+ network 10.126.115.0 0.0.0.127 area 1
+ network 10.126.117.64 0.0.0.63 area 1
+ network 10.126.117.128 0.0.0.63 area 1
+ network 10.126.118.224 0.0.0.31 area 1
+ network 10.126.119.0 0.0.0.31 area 1
+!
+router rip
+!
+ip nat inside source static tcp 10.126.115.3 80 10.126.114.2 80 
+ip nat inside source static tcp 10.126.115.3 443 10.126.114.2 443 
+ip nat inside source static tcp 10.126.115.2 53 10.126.114.2 53 
+ip nat inside source static udp 10.126.115.2 53 10.126.114.2 53 
+ip classless
+ip route 10.126.114.128 255.255.255.128 10.126.114.1 
+ip route 10.126.115.128 255.255.255.128 10.126.114.1 
+ip route 10.126.116.0 255.255.255.192 10.126.114.1 
+ip route 10.126.118.128 255.255.255.192 10.126.114.1 
+ip route 10.126.119.32 255.255.255.240 10.126.114.1 
+ip route 10.126.112.0 255.255.255.0 10.126.114.3 
+ip route 10.126.116.64 255.255.255.192 10.126.114.3 
+ip route 10.126.117.0 255.255.255.192 10.126.114.3 
+ip route 10.126.117.192 255.255.255.192 10.126.114.3 
+ip route 10.126.118.0 255.255.255.192 10.126.114.3 
+ip route 10.126.113.0 255.255.255.0 10.126.114.4 
+ip route 10.126.116.128 255.255.255.192 10.126.114.4 
+ip route 10.126.116.192 255.255.255.192 10.126.114.4 
+ip route 10.126.118.64 255.255.255.192 10.126.114.4 
+ip route 10.126.118.192 255.255.255.224 10.126.114.4 
+ip route 0.0.0.0 0.0.0.0 10.126.114.10 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+telephony-service
+ max-ephones 2
+ max-dn 20
+ ip source-address 10.126.119.10 port 2000
+ auto assign 1 to 2
+ auto assign 1 to 20
+!
+ephone-dn 1
+ number 10001
+!
+ephone-dn 2
+ number 10002
+!
+ephone 2
+ device-security-mode none
+ mac-address 00D0.97B2.EEAE
+ type 7960
+ button 1:2
+!
+ephone 1
+ device-security-mode none
+ mac-address 00D0.BCAC.3A31
+ type 7960
+ button 1:1
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
