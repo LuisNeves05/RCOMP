@@ -1,0 +1,192 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 10.126.113.254
+ip dhcp excluded-address 10.126.113.252
+ip dhcp excluded-address 10.126.113.253
+ip dhcp excluded-address 10.126.116.190
+ip dhcp excluded-address 10.126.116.254
+ip dhcp excluded-address 10.126.118.126
+ip dhcp excluded-address 10.126.118.222
+!
+ip dhcp pool B4_DMZ_250N
+ network 10.126.113.0 255.255.255.0
+ default-router 10.126.113.254
+ dns-server 10.126.113.253
+ip dhcp pool B4_WIFI_60N
+ network 10.126.116.128 255.255.255.192
+ default-router 10.126.116.190
+ dns-server 10.126.113.253
+ip dhcp pool B4_END_USER_F1_50N
+ network 10.126.116.192 255.255.255.192
+ default-router 10.126.116.254
+ dns-server 10.126.113.253
+ip dhcp pool B4_END_USER_F0_40N
+ network 10.126.118.64 255.255.255.192
+ default-router 10.126.118.126
+ dns-server 10.126.113.253
+ip dhcp pool B4_VoIP_25N
+ network 10.126.118.192 255.255.255.224
+ default-router 10.126.118.222
+ option 150 ip 10.126.118.222
+ dns-server 10.126.113.253
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10179A4D-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.126.114.4 255.255.255.128
+ ip nat outside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.1
+ encapsulation dot1Q 326
+ ip nat inside
+ ip address 10.126.113.254 255.255.255.0
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 333
+ ip address 10.126.116.190 255.255.255.192
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 334
+ ip address 10.126.116.254 255.255.255.192
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 340
+ ip address 10.126.118.126 255.255.255.192
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 342
+ ip address 10.126.118.222 255.255.255.224
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 4
+ log-adjacency-changes
+ network 10.126.113.0 0.0.0.255 area 4
+ network 10.126.116.128 0.0.0.63 area 4
+ network 10.126.116.192 0.0.0.63 area 4
+ network 10.126.118.64 0.0.0.63 area 4
+ network 10.126.118.192 0.0.0.31 area 4
+!
+router rip
+!
+ip nat inside source static tcp 10.126.113.252 80 10.126.114.4 80 
+ip nat inside source static tcp 10.126.113.252 443 10.126.114.4 443 
+ip nat inside source static tcp 10.126.113.253 53 10.126.114.4 53 
+ip nat inside source static udp 10.126.113.253 53 10.126.114.4 53 
+ip classless
+ip route 10.126.114.128 255.255.255.128 10.126.114.1 
+ip route 10.126.115.128 255.255.255.128 10.126.114.1 
+ip route 10.126.116.0 255.255.255.192 10.126.114.1 
+ip route 10.126.118.128 255.255.255.192 10.126.114.1 
+ip route 10.126.119.32 255.255.255.240 10.126.114.1 
+ip route 10.126.115.0 255.255.255.128 10.126.114.2 
+ip route 10.126.117.64 255.255.255.192 10.126.114.2 
+ip route 10.126.117.128 255.255.255.192 10.126.114.2 
+ip route 10.126.118.224 255.255.255.224 10.126.114.2 
+ip route 10.126.119.0 255.255.255.224 10.126.114.2 
+ip route 10.126.112.0 255.255.255.0 10.126.114.3 
+ip route 10.126.116.64 255.255.255.192 10.126.114.3 
+ip route 10.126.117.0 255.255.255.192 10.126.114.3 
+ip route 10.126.117.192 255.255.255.192 10.126.114.3 
+ip route 10.126.118.0 255.255.255.192 10.126.114.3 
+ip route 0.0.0.0 0.0.0.0 10.126.114.10 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+dial-peer voice 2 voip
+ destination-pattern 300..
+ session target ipv4:10.126.118.1
+!
+dial-peer voice 3 voip
+ destination-pattern 400..
+ session target ipv4:10.126.118.222
+!
+dial-peer voice 4 voip
+ destination-pattern 100..
+ session target ipv4:10.126.119.10
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.126.118.222 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 40001
+!
+ephone-dn 2
+ number 40002
+!
+ephone 1
+ device-security-mode none
+ mac-address 000A.F36E.D893
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0060.708D.6EB2
+ type 7960
+ button 1:2
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
